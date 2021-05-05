@@ -32,6 +32,8 @@ We design a pipeline of transformers and a regular LSTM network to make stock pr
 
 Trading based on prediction: We bought stock based on the stock price prediction. If the actual stock price on test data is higher than the price we bought stock then we close a trade with profit. On the other hand, if the actual stock price on test data is lower than the price we bought stock then we close a trade with a loss. We report the total number of profitable and unprofitable trades as well as total profit and success rate.
 
+**Strategy-2: LSTM autoencoder network for consolidation breakouts**
+
 We design a pipeline of transformers and an LSTM autoencoder network to detect anomalies in stock price. We take data point from the test set and try to reconstruct using trained autoencoder. If reconstruction error is above a certain threshold, we label that data point as a breakout.
 
 Trading based on consolidation breakouts: We bought stock based on the consolidation breakouts prediction. If the actual stock price on test data is higher than the price we bought stock then we close a trade with profit. On the other hand, if the actual stock price on test data is lower than the price we bought stock then we close a trade with a loss. We report the total number of profitable and unprofitable trades as well as total profit and success rate.
